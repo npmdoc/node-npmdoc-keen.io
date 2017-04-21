@@ -1,0 +1,689 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/keenlabs/KeenClient-Node">keen.io (v0.1.3)</a>
+</h1>
+<h4>Keen IO NodeJS module. Keen IO is a hosted API to collect, analyze, and visualize your data.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.keen.io">module keen.io</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.Query">
+            function <span class="apidocSignatureSpan">keen.io.</span>Query
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.configure">
+            function <span class="apidocSignatureSpan">keen.io.</span>configure
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.decryptScopedKey">
+            function <span class="apidocSignatureSpan">keen.io.</span>decryptScopedKey
+            <span class="apidocSignatureSpan">(apiKey, scopedKey)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.encryptScopedKey">
+            function <span class="apidocSignatureSpan">keen.io.</span>encryptScopedKey
+            <span class="apidocSignatureSpan">(apiKey, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.io.Query">
+            function <span class="apidocSignatureSpan">keen.io.</span>io.Query
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">keen.io.</span>io.Query.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">keen.io.</span>io.query</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">keen.io.</span>io.requests</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.keen.io.Query">module keen.io.Query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.Query.Query">
+            function <span class="apidocSignatureSpan">keen.io.</span>Query
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.keen.io.Query.prototype">module keen.io.Query.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.Query.prototype.configure">
+            function <span class="apidocSignatureSpan">keen.io.Query.prototype.</span>configure
+            <span class="apidocSignatureSpan">(analysisType, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.Query.prototype.get">
+            function <span class="apidocSignatureSpan">keen.io.Query.prototype.</span>get
+            <span class="apidocSignatureSpan">(attribute)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.Query.prototype.set">
+            function <span class="apidocSignatureSpan">keen.io.Query.prototype.</span>set
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.keen.io.query">module keen.io.query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.query.Query">
+            function <span class="apidocSignatureSpan">keen.io.query.</span>Query
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">keen.io.query.</span>client</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.keen.io.requests">module keen.io.requests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.requests.del">
+            function <span class="apidocSignatureSpan">keen.io.requests.</span>del
+            <span class="apidocSignatureSpan">(apiKey, path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.requests.get">
+            function <span class="apidocSignatureSpan">keen.io.requests.</span>get
+            <span class="apidocSignatureSpan">(apiKey, path, data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.keen.io.requests.post">
+            function <span class="apidocSignatureSpan">keen.io.requests.</span>post
+            <span class="apidocSignatureSpan">(apiKey, path, data, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.keen.io" id="apidoc.module.keen.io">module keen.io</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.Query" id="apidoc.element.keen.io.Query">
+        function <span class="apidocSignatureSpan">keen.io.</span>Query
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Query = function (){
+  this.configure.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Analyses are first-class citizens, complete with parameter getters and setters.
+
+The `&lt;Client&gt;.run` method is available on each configured client instance to run one or many analyses on a given project
+. Read more about running multiple analyses below.
+
+**Format:**
+
+```javascript
+var your_analysis = new Keen.<span class="apidocCodeKeywordSpan">Query</span>(analysisType, params);
+```
+
+### Example Usage
+
+```javascript
+var Keen = require('keen.io');
+var client = Keen.configure({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.configure" id="apidoc.element.keen.io.configure">
+        function <span class="apidocSignatureSpan">keen.io.</span>configure
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function configure(config) {
+	return new KeenApi(config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Initialization
+
+```javascript
+var Keen = require('keen.io');
+
+// Configure instance. Only projectId and writeKey are required to send data.
+var client = Keen.<span class="apidocCodeKeywordSpan">configure</span>({
+	projectId: "&lt;project_id&gt;",
+	writeKey: "&lt;write_key&gt;",
+	readKey: "&lt;read_key&gt;",
+	masterKey: "&lt;master_key&gt;"
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.decryptScopedKey" id="apidoc.element.keen.io.decryptScopedKey">
+        function <span class="apidocSignatureSpan">keen.io.</span>decryptScopedKey
+        <span class="apidocSignatureSpan">(apiKey, scopedKey)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decryptScopedKey(apiKey, scopedKey) {
+	var hexedIv = scopedKey.substring(0, 32);
+	var hexedCipherText = scopedKey.substring(32, scopedKey.length);
+	var iv = new Buffer(hexedIv, "hex");
+	var cipherText = new Buffer(hexedCipherText, "hex");
+	var decipher = crypto.createDecipheriv("aes-256-cbc", apiKey, iv);
+	var decryptOutput1 = decipher.update(cipherText);
+	var decryptOutput2 = decipher.final();
+	var decrypted = decryptOutput1 + decryptOutput2;
+	return JSON.parse(decrypted);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.encryptScopedKey" id="apidoc.element.keen.io.encryptScopedKey">
+        function <span class="apidocSignatureSpan">keen.io.</span>encryptScopedKey
+        <span class="apidocSignatureSpan">(apiKey, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encryptScopedKey(apiKey, options) {
+	var iv = crypto.randomBytes(16);
+	var cipher = crypto.createCipheriv("aes-256-cbc", apiKey, iv);
+	var jsonOptions = JSON.stringify(options);
+	var encryptOutput1 = cipher.update(jsonOptions, "utf8", "hex");
+	var encryptOutput2 = cipher.final("hex");
+	var ivPlusEncrypted = iv.toString("hex") + encryptOutput1 + encryptOutput2;
+	return ivPlusEncrypted;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Generate Scoped Key
+
+```javascript
+var Keen = require("keen.io");
+var apiKey = "YOUR_API_KEY";
+var scopedKey = Keen.<span class="apidocCodeKeywordSpan">encryptScopedKey</span>(apiKey, {
+	"allowed_operations": ["read"],
+	"filters": [{
+		"property_name": "account.id",
+		"operator": "eq",
+		"property_value": "123"
+	}]
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.io.Query" id="apidoc.element.keen.io.io.Query">
+        function <span class="apidocSignatureSpan">keen.io.</span>io.Query
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">io.Query = function (){
+  this.configure.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.keen.io.Query" id="apidoc.module.keen.io.Query">module keen.io.Query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.Query.Query" id="apidoc.element.keen.io.Query.Query">
+        function <span class="apidocSignatureSpan">keen.io.</span>Query
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Query = function (){
+  this.configure.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Analyses are first-class citizens, complete with parameter getters and setters.
+
+The `&lt;Client&gt;.run` method is available on each configured client instance to run one or many analyses on a given project
+. Read more about running multiple analyses below.
+
+**Format:**
+
+```javascript
+var your_analysis = new Keen.<span class="apidocCodeKeywordSpan">Query</span>(analysisType, params);
+```
+
+### Example Usage
+
+```javascript
+var Keen = require('keen.io');
+var client = Keen.configure({
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.keen.io.Query.prototype" id="apidoc.module.keen.io.Query.prototype">module keen.io.Query.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.Query.prototype.configure" id="apidoc.element.keen.io.Query.prototype.configure">
+        function <span class="apidocSignatureSpan">keen.io.Query.prototype.</span>configure
+        <span class="apidocSignatureSpan">(analysisType, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configure = function (analysisType, params){
+  //if (!collection) throw new Error('Event Collection name is required');
+  var self = this;
+  self.path = '/queries/' + analysisType;
+  self.params = {};
+  self.set(params);
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Initialization
+
+```javascript
+var Keen = require('keen.io');
+
+// Configure instance. Only projectId and writeKey are required to send data.
+var client = Keen.<span class="apidocCodeKeywordSpan">configure</span>({
+	projectId: "&lt;project_id&gt;",
+	writeKey: "&lt;write_key&gt;",
+	readKey: "&lt;read_key&gt;",
+	masterKey: "&lt;master_key&gt;"
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.Query.prototype.get" id="apidoc.element.keen.io.Query.prototype.get">
+        function <span class="apidocSignatureSpan">keen.io.Query.prototype.</span>get
+        <span class="apidocSignatureSpan">(attribute)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (attribute) {
+  if (this.params) {
+    return this.params[attribute] || null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return "?" + query.join('&amp;');
+}
+
+module.exports = {
+get: function(apiKey, path, data, callback) {
+  rest
+  .<span class="apidocCodeKeywordSpan">get</span>(this.baseUrl + this.apiVersion + path + buildQueryString(data))
+  .set('Authorization', apiKey)
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+},
+post: function(apiKey, path, data, callback) {
+  rest
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.Query.prototype.set" id="apidoc.element.keen.io.Query.prototype.set">
+        function <span class="apidocSignatureSpan">keen.io.Query.prototype.</span>set
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (attributes) {
+  var self = this;
+  _.each(attributes, function(v, k){
+    var key = k, value = v;
+    if (k.match(new RegExp("[A-Z]"))) {
+      key = k.replace(/([A-Z])/g, function($1) { return "_"+$1.toLowerCase(); });
+    }
+    self.params[key] = value;
+
+    if (_.isArray(value)) {
+      _.each(value, function(dv, index){
+        if (_.isObject(dv)) {
+          _.each(dv, function(deepValue, deepKey){
+            if (deepKey.match(new RegExp("[A-Z]"))) {
+              var _deepKey = deepKey.replace(/([A-Z])/g, function($1) { return "_"+$1.toLowerCase(); });
+              delete self.params[key][index][deepKey];
+              self.params[key][index][_deepKey] = deepValue;
+            }
+          });
+        }
+      });
+    }
+
+  });
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Get/Set Parameters and Refresh Queries
+
+```javascript
+// Based on previous example
+
+// Update parameters
+avg_revenue.<span class="apidocCodeKeywordSpan">set</span>({ timeframe: "this_21_days" });
+max_revenue.set({ timeframe: "this_21_days" });
+
+// Re-run the query
+mashup.refresh();
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.keen.io.query" id="apidoc.module.keen.io.query">module keen.io.query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.query.Query" id="apidoc.element.keen.io.query.Query">
+        function <span class="apidocSignatureSpan">keen.io.query.</span>Query
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Query = function (){
+  this.configure.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Analyses are first-class citizens, complete with parameter getters and setters.
+
+The `&lt;Client&gt;.run` method is available on each configured client instance to run one or many analyses on a given project
+. Read more about running multiple analyses below.
+
+**Format:**
+
+```javascript
+var your_analysis = new Keen.<span class="apidocCodeKeywordSpan">Query</span>(analysisType, params);
+```
+
+### Example Usage
+
+```javascript
+var Keen = require('keen.io');
+var client = Keen.configure({
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.keen.io.requests" id="apidoc.module.keen.io.requests">module keen.io.requests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.requests.del" id="apidoc.element.keen.io.requests.del">
+        function <span class="apidocSignatureSpan">keen.io.requests.</span>del
+        <span class="apidocSignatureSpan">(apiKey, path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (apiKey, path, callback) {
+  rest
+  .del(this.baseUrl + this.apiVersion + path)
+  .set('Authorization', apiKey)
+  .set('Content-Length', 0)
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    .send(data || {})
+    .end(function(err, res) {
+      processResponse(err, res, callback);
+    });
+  },
+  del: function(apiKey, path, callback) {
+    rest
+    .<span class="apidocCodeKeywordSpan">del</span>(this.baseUrl + this.apiVersion + path)
+    .set('Authorization', apiKey)
+    .set('Content-Length', 0)
+    .end(function(err, res) {
+      processResponse(err, res, callback);
+    });
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.requests.get" id="apidoc.element.keen.io.requests.get">
+        function <span class="apidocSignatureSpan">keen.io.requests.</span>get
+        <span class="apidocSignatureSpan">(apiKey, path, data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (apiKey, path, data, callback) {
+  rest
+  .get(this.baseUrl + this.apiVersion + path + buildQueryString(data))
+  .set('Authorization', apiKey)
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return "?" + query.join('&amp;');
+}
+
+module.exports = {
+get: function(apiKey, path, data, callback) {
+  rest
+  .<span class="apidocCodeKeywordSpan">get</span>(this.baseUrl + this.apiVersion + path + buildQueryString(data))
+  .set('Authorization', apiKey)
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+},
+post: function(apiKey, path, data, callback) {
+  rest
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.keen.io.requests.post" id="apidoc.element.keen.io.requests.post">
+        function <span class="apidocSignatureSpan">keen.io.requests.</span>post
+        <span class="apidocSignatureSpan">(apiKey, path, data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (apiKey, path, data, callback) {
+  rest
+  .post(this.baseUrl + this.apiVersion + path)
+  .set('Authorization', apiKey)
+  .set('Content-Type', 'application/json')
+  .send(data || {})
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .set('Authorization', apiKey)
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+},
+post: function(apiKey, path, data, callback) {
+  rest
+  .<span class="apidocCodeKeywordSpan">post</span>(this.baseUrl + this.apiVersion + path)
+  .set('Authorization', apiKey)
+  .set('Content-Type', 'application/json')
+  .send(data || {})
+  .end(function(err, res) {
+    processResponse(err, res, callback);
+  });
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
